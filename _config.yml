@@ -9,7 +9,7 @@ version: 2
 name: WonShik Jang
 title: M.S Candidate
 email: wonsicjang@gm.gist.ac.kr
-ACSL: https://uehwan.github.io/
+website: https://uehwan.github.io/
 
 # Dark Mode (true/false/never)
 darkmode: false
