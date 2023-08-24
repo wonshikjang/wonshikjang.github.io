@@ -46,7 +46,7 @@ linkedin_username: 원식-장-939a22289
 # about_title: About Me
 about_profile_image: images/profile.jpg
 about_content: | # this will include new lines to allow paragraphs
-  Hi, my name is  wonshik and I'm a M.S Candidate at Gwangju Institute of Science and Technology (GIST). |  
+  Hi, my name is  wonshik and I'm a M.S Candidate at Gwangju Institute of Science and Technology (GIST).  
   I'm  I work as a AI researcher in Autonomous Computing System Lab (ACSL) under the supervision of Prof. Uehwan Kim
   
 
@@ -58,14 +58,14 @@ content:
         title: Gwangju Institute of Science and Technology (GIST)
         caption: 2023 - Present
         sub_title: M.S Course in AI Graduate School
+        quote: >
+          Established in 1995, GIST is  a research-centered university in the Republic of Korea, dedicated to cultivating top-tier talent in advanced science and technology fields
         description: | # this will include new lines to allow paragraphs
-          . I am trying hard to become an expert in Computer Vision, specially SLAM, 3D Vision.
+          I am trying hard to become an expert in Computer Vision, specially SLAM, 3D Vision.
       - layout: left
         title: Gwangju Institute of Science and Technology (GIST)
         caption: 2017 - 2023
         sub_title: B.S Computer Science
-        #quote: >
-          #Established in 1636, Harvard is the oldest higher education institution in the United States, and is widely regarded in terms of its influence, reputation, and academic pedigree as a leading university in not just the US but also the world.
         description: | # this will include new lines to allow paragraphs
           During my time at GIST I learnt most of my key skills that have I have taken through my career such as teamwork and working to tight deadlines. I thouroughly enjoyed my time as university and learnt a lot about a healthy work life balance.
 
