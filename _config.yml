@@ -9,10 +9,10 @@ version: 2
 name: WonShik Jang
 title: M.S Candidate
 email: wonsicjang@gm.gist.ac.kr
-website: www.github.com/wonshikjang/
+#website: www.github.com/wonshikjang/
 
 # Dark Mode (true/false/never)
-darkmode: false
+darkmode: True
 
 # Social links
 github_username:  wonshikjang
