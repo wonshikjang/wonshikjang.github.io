@@ -60,6 +60,7 @@ content:
         sub_title: M.S Course in AI Graduate School
         description: | # this will include new lines to allow paragraphs
           . I am trying hard to become an expert in Computer Vision, specially SLAM, 3D Vision.
+    layout: list
     content:
       - layout: left
         title: Gwangju Institute of Science and Technology (GIST)
@@ -83,6 +84,7 @@ content:
           to drive success for customers and contribute to making the world a better place with our ONLYONE technology and service.
         description: | # this will include new lines to allow paragraphs
              Developed API for AI services platform. I had no prior knowledge of web server and backend development, but I successfully completed the assigned tasks.
+    layout: list
     content:
       - layout: left
         title: WRTN
