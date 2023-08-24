@@ -1,7 +1,6 @@
 # Site
 repository: wonshikjang/wonshik.github.io
 favicon: images/favicon.ico
-url: "https://wonshik.github.io/"
 
 # Content configuration version
 version: 2
@@ -50,6 +49,7 @@ about_content: | # this will include new lines to allow paragraphs
   Hi, I'm a M.S Candidate at Gwangju Institute of Science and Technology (GIST).  
   I work as a AI researcher in Autonomous Computing System Lab (ACSL) under the supervision of Prof. Uehwan Kim
   
+  I enjoy traveling to various places around the world to experience the great outdoors, unique cultures, and cuisines. I also love artists and bands like Nell, Jaurim, and Younha, and I'm a fan of music festivals.
 
 content:
   - title: Education # Title for the section
@@ -78,7 +78,7 @@ content:
         link: https://www.cjolivenetworks.co.kr/
         # link_text: boringcompany.com
         sub_title: MLOps Engineer(intern)
-        caption: Jul 2023 - Aug 2023
+        caption: Jul 2022 - Aug 2022
         quote: >
           to drive success for customers and contribute to making the world a better place with our ONLYONE technology and service.
         description: | # this will include new lines to allow paragraphs
@@ -88,7 +88,7 @@ content:
         link: https://wrtn.io/
         # link_text: boringcompany.com
         sub_title: Frontend Developer(intern)
-        caption: Dec 2022 - Feb 2023
+        caption: Dec 2021 - Feb 2022
         quote: >
           For every one, AI
         description: | # this will include new lines to allow paragraphs
@@ -112,16 +112,46 @@ content:
           Writing down your concerns and clarify them.
         description: | # this will include new lines to allow paragraphs
           When your worries clutter your mind, putting them into words through writing can help alleviate them. Taking inspiration from this, I have envisioned a platform where you can gain clarity about the concerns bothering you, and by putting them into writing, you can alleviate the burden.
+   
+  - title: Awards # Title for the section
+    layout: list # Type of content section (list/text)
+    content: 
+      - layout: top-middle
+        title: GIST Innovative Convergence Technology Contest 3rd Prize
+        sub_title: school of Integrated Techonology GIST
+        caption: Apr. 2023
+      - layout: top-middle
+        title: GDSC(Google Developer Student Club) & GIST Hackathon 3rd Prize
+        sub_title: GIST, Google Developers, AWS, SOCAR, kakaoenterprise, CJ OliveNetwork
+        caption: Apr. 2023
+      - layout: top-middle
+        title: National Excellence Scholarship (Science and Engineering)
+        sub_title: Korea Scholarship Foundation(KOSFA)
+        caption: Mar. 2017 ~ Dec. 2022
+      
+        
+
+  - title: Volunteer # Title for the section
+    layout: list # Type of content section (list/text)
+    content: 
+      - layout: top-middle
+        title: GIST-NIA World Friend International ICT volunteer
+        caption: Jul 2019 - Aug 2019
+        description: | # this will include new lines to allow paragraphs
+          On behalf of GIST, Dispatched to Chisinau, Moldova as a volunteer for IT education and cultural exchange.
+          As team leader, planned the overall schedule and provided Arduino classes in English to about the Moldovan 100 students
+          Awarded for Excellence of the voluntary mission from GIST
+      - layout: top-middle
+        title: SK SUNNY College Student Volunteer Group 
+        caption: Mar. 2019 - Jun 2019
+        description: | # this will include new lines to allow paragraphs
+          Provided environmental education related to fine dust to lower grades of elementary school to keep them interested in environmental issues at Ochi elementary school, Gwangju
+      - layout: top-middle
+        title: GIST Social Contribution Group Learning Center Volunteer 
+        caption: May 2017 - May 2019
+        description: | # this will include new lines to allow paragraphs
+          On behalf of GIST, taught Korean, Math, English every week until the first grade of elementary school student became the third grade.
   
-  - title: A Little More About Me
-    layout: text
-    content: | # this will include new lines to allow paragraphs
-      Alongside my interests in networks and software engineering some of my other interests and hobbies are:
-      - Travel 
-      - Swimming 
-      - Music Festival
-
-
 
 #Look at this cool image  
 #![Trees](/modern-resume-theme/images/landscape-trees.jpg "Trees")
