@@ -1,6 +1,7 @@
 # Site
 repository: wonshikjang/wonshik.github.io
 favicon: images/favicon.ico
+url: "https://wonshik.github.io/"
 
 # Content configuration version
 version: 2
