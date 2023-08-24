@@ -60,7 +60,6 @@ content:
         sub_title: M.S Course in AI Graduate School
         description: | # this will include new lines to allow paragraphs
           . I am trying hard to become an expert in Computer Vision, specially SLAM, 3D Vision.
-    content:
       - layout: left
         title: Gwangju Institute of Science and Technology (GIST)
         caption: 2017 - 2023
