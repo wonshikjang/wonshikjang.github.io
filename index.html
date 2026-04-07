@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Won Shik Jang</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fafaf8;
+    --text: #1a1a1a;
+    --muted: #6b6b6b;
+    --accent: #1a56db;
+    --accent-bg: #eef2ff;
+    --border: #e5e5e0;
+    --card-bg: #ffffff;
+    --serif: 'Source Serif 4', Georgia, serif;
+    --sans: 'DM Sans', -apple-system, sans-serif;
+    --max-w: 720px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .container {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ── Header / Bio ── */
+  header {
+    padding: 64px 0 48px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .bio {
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+  }
+
+  .bio-photo {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    background: var(--border);
+    border: 3px solid var(--card-bg);
+    box-shadow: 0 2px 12px rgba(0,0,0,.08);
+  }
+
+  .bio-text h1 {
+    font-family: var(--serif);
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    margin-bottom: 4px;
+  }
+
+  .bio-subtitle {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 14px;
+  }
+
+  .bio-desc {
+    font-size: 14.5px;
+    color: #333;
+    line-height: 1.75;
+  }
+
+  .bio-links {
+    margin-top: 16px;
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    font-size: 13.5px;
+  }
+
+  .bio-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--muted);
+    transition: color .15s;
+  }
+  .bio-links a:hover { color: var(--accent); text-decoration: none; }
+
+  /* ── Sections ── */
+  section {
+    padding: 40px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  section:last-child { border-bottom: none; }
+
+  .section-title {
+    font-family: var(--serif);
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    letter-spacing: -0.2px;
+  }
+
+  /* ── News ── */
+  .news-list {
+    list-style: none;
+  }
+  .news-list li {
+    display: flex;
+    gap: 16px;
+    padding: 6px 0;
+    font-size: 14px;
+    line-height: 1.65;
+  }
+  .news-date {
+    flex-shrink: 0;
+    width: 80px;
+    color: var(--muted);
+    font-size: 13px;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* ── Publications ── */
+  .pub {
+    display: flex;
+    gap: 20px;
+    padding: 18px 0;
+  }
+  .pub + .pub { border-top: 1px solid #f0f0ec; }
+
+  .pub-thumb {
+    width: 160px;
+    min-width: 160px;
+    height: 100px;
+    border-radius: 6px;
+    background: linear-gradient(135deg, #e8ecf4 0%, #d4dce8 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    color: var(--muted);
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .pub-info { flex: 1; }
+
+  .pub-title {
+    font-family: var(--serif);
+    font-size: 15.5px;
+    font-weight: 600;
+    line-height: 1.45;
+    margin-bottom: 4px;
+  }
+
+  .pub-authors {
+    font-size: 13.5px;
+    color: #444;
+    margin-bottom: 3px;
+  }
+  .pub-authors .me { font-weight: 600; }
+
+  .pub-venue {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+
+  .pub-badge {
+    display: inline-block;
+    background: var(--accent-bg);
+    color: var(--accent);
+    font-size: 11.5px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-right: 4px;
+  }
+
+  .pub-links {
+    display: flex;
+    gap: 12px;
+    font-size: 13px;
+    margin-top: 6px;
+  }
+  .pub-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    color: var(--muted);
+    transition: color .15s;
+  }
+  .pub-links a:hover { color: var(--accent); }
+
+  /* ── Education / Experience ── */
+  .timeline-item {
+    padding: 10px 0;
+    display: flex;
+    gap: 16px;
+  }
+
+  .timeline-year {
+    flex-shrink: 0;
+    width: 100px;
+    font-size: 13px;
+    color: var(--muted);
+    padding-top: 2px;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .timeline-body h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+  .timeline-body p {
+    font-size: 13.5px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  /* ── Footer ── */
+  footer {
+    padding: 32px 0 48px;
+    text-align: center;
+    font-size: 12.5px;
+    color: var(--muted);
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 600px) {
+    .bio { flex-direction: column; align-items: center; text-align: center; }
+    .bio-links { justify-content: center; }
+    .pub { flex-direction: column; }
+    .pub-thumb { width: 100%; min-width: unset; height: 140px; }
+    .timeline-item { flex-direction: column; gap: 4px; }
+    .timeline-year { width: auto; }
+    .news-list li { flex-direction: column; gap: 2px; }
+    .news-date { width: auto; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- ─── Header ─── -->
+  <header>
+    <div class="bio">
+      <div style="width:130px;height:130px;border-radius:50%;background:linear-gradient(135deg,#c9d6e8,#a8b8cc);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:32px;color:#fff;font-family:var(--serif);font-weight:700;box-shadow:0 2px 12px rgba(0,0,0,.08);">WJ</div>
+      <div class="bio-text">
+        <h1>Won Shik Jang</h1>
+        <div class="bio-subtitle">Ph.D. Candidate · AI Graduate School, GIST</div>
+        <p class="bio-desc">
+          I am a Ph.D. candidate at <a href="https://www.gist.ac.kr/" target="_blank">Gwangju Institute of Science and Technology (GIST)</a>, working in the <a href="https://uehwan.github.io/" target="_blank">Autonomous Computing System Lab (ACSL)</a> advised by <a href="https://uehwan.github.io/" target="_blank">Prof. Ue-Hwan Kim</a>. My research focuses on <strong>computer vision</strong> and <strong>embodied AI</strong>, with emphasis on visual navigation, 3D spatial reasoning, and SLAM.
+        </p>
+        <div class="bio-links">
+          <a href="mailto:wonsicjang@gm.gist.ac.kr">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
+            Email
+          </a>
+          <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 110-14 7 7 0 010 14zm0-24L0 9.5l4.838 3.94A8 8 0 0112 9a8 8 0 017.162 4.44L24 9.5z"/></svg>
+            Scholar
+          </a>
+          <a href="https://github.com/wonshikjang" target="_blank">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.73.083-.73 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22v3.293c0 .319.216.694.825.577C20.565 21.795 24 17.295 24 12 24 5.37 18.627 0 12 0z"/></svg>
+            GitHub
+          </a>
+          <a href="https://arxiv.org/search/?query=Won+Shik+Jang&searchtype=author" target="_blank">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+            arXiv
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ─── News ─── -->
+  <section>
+    <h2 class="section-title">News</h2>
+    <ul class="news-list">
+      <li>
+        <span class="news-date">Mar 2026</span>
+        <span>🎉 One paper accepted to <strong>CVPR 2026</strong>!</span>
+      </li>
+      <li>
+        <span class="news-date">2023</span>
+        <span>Started Ph.D. at GIST AI Graduate School.</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ─── Publications ─── -->
+  <section>
+    <h2 class="section-title">Publications</h2>
+
+    <div class="pub">
+      <div class="pub-thumb">
+        <svg width="80" height="50" viewBox="0 0 80 50" fill="none">
+          <rect x="5" y="10" width="25" height="30" rx="3" fill="#b8c6d9"/>
+          <rect x="35" y="5" width="25" height="40" rx="3" fill="#8fa4bd"/>
+          <circle cx="65" cy="25" r="10" fill="#6b89a8"/>
+          <path d="M10 35 L30 20 L50 30 L70 15" stroke="#3b5998" stroke-width="2" fill="none"/>
+        </svg>
+      </div>
+      <div class="pub-info">
+        <div class="pub-title">Context-Nav: Context-Driven Exploration and Viewpoint-Aware 3D Spatial Reasoning for Instance Navigation</div>
+        <div class="pub-authors"><span class="me">Won Shik Jang</span>, Ue-Hwan Kim</div>
+        <div class="pub-venue">
+          <span class="pub-badge">CVPR 2026</span>
+          Conference on Computer Vision and Pattern Recognition
+        </div>
+        <div class="pub-links">
+          <a href="https://arxiv.org/abs/2603.09506" target="_blank">[Paper]</a>
+          <a href="https://arxiv.org/pdf/2603.09506" target="_blank">[PDF]</a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ─── Education ─── -->
+  <section>
+    <h2 class="section-title">Education</h2>
+
+    <div class="timeline-item">
+      <div class="timeline-year">2023 – Present</div>
+      <div class="timeline-body">
+        <h3>Gwangju Institute of Science and Technology (GIST)</h3>
+        <p>Ph.D. in AI Graduate School · Advised by Prof. Ue-Hwan Kim</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-year">2017 – 2023</div>
+      <div class="timeline-body">
+        <h3>Gwangju Institute of Science and Technology (GIST)</h3>
+        <p>B.S. in Computer Science</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Experience ─── -->
+  <section>
+    <h2 class="section-title">Experience</h2>
+
+    <div class="timeline-item">
+      <div class="timeline-year">Jul – Aug 2022</div>
+      <div class="timeline-body">
+        <h3>CJ OliveNetworks</h3>
+        <p>MLOps Engineer Intern · Developed APIs for AI services platform</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-year">Dec 2021 – Feb 2022</div>
+      <div class="timeline-body">
+        <h3>WRTN</h3>
+        <p>Frontend Developer Intern · Built collaborative documentation tools</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Awards ─── -->
+  <section>
+    <h2 class="section-title">Awards</h2>
+
+    <div class="timeline-item">
+      <div class="timeline-year">Aug 2023</div>
+      <div class="timeline-body">
+        <h3>GIST Innovative Convergence Technology Contest</h3>
+        <p>3rd Prize</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-year">Apr 2023</div>
+      <div class="timeline-body">
+        <h3>GDSC & GIST Hackathon</h3>
+        <p>3rd Prize</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-year">2017 – 2022</div>
+      <div class="timeline-body">
+        <h3>National Excellence Scholarship (Science & Engineering)</h3>
+        <p>Korea Scholarship Foundation (KOSAF)</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Won Shik Jang · Last updated April 2026
+  </footer>
+
+</div>
+
+</body>
+</html>
